@@ -12,11 +12,11 @@ public class SelenideSearchTests {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
-        open("https://github.com/");
     }
 
     @Test
     void shouldSearchSelenideWiki() {
+        open("https://github.com/");
         //Откройте страницу Selenide в Github
         $("[name=q]").setValue("Selenide").pressEnter();
         $$(".repo-list li").first().$("a").click();
